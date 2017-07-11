@@ -31,8 +31,8 @@ expressions=""
 
 for varname in $varnames; do
         # Check if the variable named $varname is defined
-        if [ -z ${!varname+x} ]; then
-                echo "ERROR: $varname is not defined" >&2
+        if [ -z ${!varname} ]; then
+                echo "ERROR: $varname is not defined or empty" >&2
                 error=true
         else
                 # Get the value of the variable named $varname and escape
