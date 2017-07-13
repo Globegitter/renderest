@@ -24,6 +24,7 @@
 set -e
 
 no_empty=false
+
 case $1 in
     -e|--no-empty)
     no_empty=true
@@ -42,7 +43,7 @@ for varname in $varnames; do
         if [ -z ${!varname+x} ]; then
                 echo "ERROR: $varname is not defined" >&2
                 error=true
-        elif [ $no_empty='true' ] && [ -z ${!varname} ]; then
+        elif [ $no_empty = true ] && [ -z ${!varname} ]; then
                 echo "ERROR: $varname is empty" >&2
                 error=true
         else
