@@ -78,7 +78,7 @@ it "does throw an error if test_variable is defined but empty if --no-empty flag
 ERROR: test_variable is empty
 EOF
 
-it "doesn' throw an error if test_variable is defined but empty and --no-empty flag is provided on last position" "test_variable=" "" "--no-empty" <<EOF
+it "doesn't throw an error if test_variable is defined but empty and --no-empty flag is provided on last position" "test_variable=" "" "--no-empty" <<EOF
 somerandomtextmorerandomtext
 \$symbol_that_doesnt_get_rendered
 EOF
